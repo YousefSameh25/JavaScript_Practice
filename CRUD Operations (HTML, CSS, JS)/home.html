@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="homeStyle.CSS">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div class="InputDiv">
+        <label> Product Name</label>
+        <input class="form-control" type="text">
+    </div>
+
+
+    <div class="InputDiv">
+        <label> Product Price</label>
+        <input class="form-control" type="number" min="0">
+    </div>
+
+    <div class="InputDiv">
+        <label> Product Category </label>
+        <input class="form-control" type="text">
+    </div>
+
+
+    <div class="InputDiv">
+        <label> Product Description</label>
+        <textarea class="form-control" type="text"> </textarea>
+    </div>
+
+    <div id="ButtonDiv">
+        <button class="btn btn-info my-2" onclick="AddProduct()"> Add Product </button>
+        <button class="btn btn-danger" onclick="Reset()"> Reset </button>
+    </div>
+
+    <div style="margin-top: 2%;">
+        <table class="table text-center"> 
+            <thead>
+                <th> Index </th>
+                <th> Product Name </th>
+                <th> Product Price </th>
+                <th> Product Category </th>
+                <th> Product Description </th>
+                <th> Update </th>
+                <th> Delete </th>
+            </thead>
+            <tbody id="TableBody">
+               
+            </tbody>
+
+
+
+        </table>
+
+
+
+    </div>
+
+    <script src="homeActions.js"></script>
+</body>
+
+</html>
