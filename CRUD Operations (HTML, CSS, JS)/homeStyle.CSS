@@ -2,11 +2,14 @@
 {
     margin-top: 1%;
     margin-bottom: 1%;
-    width: 50%;
+    width: 50%;  
+}
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#SearchDiv
+{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 50%;
 }
 
 body {
@@ -15,11 +18,3 @@ body {
     align-items: center;
 }
 
-.SearchDiv
-{
-    margin-top: 10%;
-    margin-bottom: 10%;
-    width: 100%;
-
-
-}

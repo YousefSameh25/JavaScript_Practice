@@ -86,12 +86,42 @@ function Delete(id)
 {
     var elementToDelete = document.getElementById(id);
     elementToDelete.remove();
+    products[id - 1] = null;
 }
+
+function SearchByName (term)
+{
+    console.log("Term" +  term);
+    var tableBody = document.getElementById("TableBody");
+    tableBody.innerHTML = "";
+    for (var i = 0 ; i < products.length; i++)
+    {
+        if (products[i] == null)
+            continue;
+        if (products[i].name.toLowerCase().includes(term.toLowerCase()) || term == "")
+        {
+            // Put it at the end of the list
+    
+        tableBody.innerHTML += `
+                <tr id="`+ parseInt(i + 1) +`">
+                    <td> `+ parseInt(i + 1) +` </td>
+                    <td> `+ products[i].name +` </td>
+                    <td> `+ products[i].price +` </td>
+                    <td> `+ products[i].category +` </td>
+                    <td> `+ products[i].description +` </td>
+                    <td> <button class="btn btn-outline-warning btn-sm" onclick="Update(`+ parseInt(i + 1) +`)"> Update</button> </td>
+                    <td> <button class="btn btn-outline-danger btn-sm" onclick = "Delete(`+ parseInt(i + 1) +`)"> Delete </button> </td>
+                </tr>
+                `;
+        }
+    }
+}
+
+
 
 
 /*
     Notes:
     Local Storage
     localStorage.setItem("Key", "Value");
-
 */
